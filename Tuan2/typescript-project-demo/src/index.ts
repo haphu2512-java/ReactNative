@@ -12,7 +12,7 @@ myPromise.then((message) => {
 
 
 // 2. Write a function that returns a Promise resolving with the number 10 after 1 second.
-function returnTenAfterOneSecond() {
+export function returnTenAfterOneSecond() {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(10);
@@ -28,7 +28,7 @@ returnTenAfterOneSecond().then((number) => {
 // 3. Write a function that rejects a Promise with the error "Something went wrong" after 1
 // second.
 
-// function rejectAfterOneSecond() {
+// export function rejectAfterOneSecond() {
 //     return new Promise((reject) => {
 //         setTimeout(() => {
 //             reject("Something went wrong");
@@ -41,7 +41,7 @@ returnTenAfterOneSecond().then((number) => {
 
 
 // 4. Use .then() and .catch() to handle a Promise that returns a random number.
-function randomNumberPromise() {
+export function randomNumberPromise() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             const randomNum = Math.random();
@@ -66,7 +66,7 @@ randomNumberPromise()
     
 // 5. Create a function simulateTask(time) that returns a Promise resolving with "Task
 // done" after time ms.
-function simulateTask(time: number): Promise<string> {
+export function simulateTask(time: number): Promise<string> {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(time + ". Task done");
@@ -104,7 +104,7 @@ Promise.resolve(2)
 
 
 // 9. Write a Promise that reads an array after 1 second and filters even numbers.
-function filterEvenNumbers(arr: number[]): Promise<number[]> {
+export function filterEvenNumbers(arr: number[]): Promise<number[]> {
     return new Promise((resolve) => {
         setTimeout(() => {
             const evenNumbers = arr.filter(num => num % 2 === 0);
@@ -120,3 +120,5 @@ filterEvenNumbers([1, 2, 3, 4, 5, 6])
     .finally(() => {
         console.log("10. Done");
     });
+
+
